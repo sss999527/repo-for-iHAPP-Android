@@ -1,0 +1,150 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/rounded_corners">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:id="@+id/iv_avatar"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/login_2" />
+
+        <TextView
+            android:gravity="left"
+            android:layout_weight="8"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text="用户名" />
+
+        <ImageView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/delete"
+            android:id="@+id/btn_delete"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="帖子标题"
+        android:maxLines="6"
+        android:textSize="14dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end" />
+
+    <!-- FrameLayout 开始 -->
+    <FrameLayout
+        android:id="@+id/media_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <!-- 单张图片 -->
+        <ImageView
+            android:id="@+id/single_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:visibility="gone" />
+
+        <!-- 视频 -->
+        <VideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:visibility="gone" />
+
+
+        <GridLayout
+            android:id="@+id/image_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:visibility="gone" />
+
+        <!--视频封面-->
+        <ImageView
+            android:id="@+id/iv_poster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:visibility="gone" />
+
+        <!-- 播放按钮 -->
+        <ImageView
+            android:id="@+id/iv_play_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/play"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/img_like"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/like"/>
+
+        <TextView
+
+            android:gravity="left"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/tv_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:text="点赞" />
+
+        <ImageView
+            android:id="@+id/img_comment"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="130dp"
+            android:src="@drawable/comment"/>
+
+        <TextView
+            android:gravity="left"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:id="@+id/tv_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评论"
+            android:textSize="13dp"/>
+    </LinearLayout>
+</LinearLayout>
